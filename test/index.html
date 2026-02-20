@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            cursor: pointer;
+        }
+
+        .active {
+            color: #3f51b5;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            height: 500px;
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: -50px;
+            gap: 10px;
+        }
+
+        .feature {
+            padding: 30px;
+            color: #fff;
+        }
+
+        .orange {
+            background: orange;
+        }
+
+        .purple {
+            background: #7b68ee;
+        }
+
+        .pink {
+            background: #ff4081;
+        }
+
+        .violet {
+            background: #9c27b0;
+        }
+
+        /* About Sections */
+        .about {
+            display: flex;
+            gap: 40px;
+            padding: 80px 0;
+        }
+
+        .about.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-img {
+            flex: 1;
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+            height: 300px;
+        }
+
+        .img2 {
+            background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836") center/cover;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: linear-gradient(to right, orange, pink);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Highlight */
+        .highlight {
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+            padding: 100px 0;
+            color: white;
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 100, 0.7);
+            padding: 40px;
+            max-width: 500px;
+        }
+
+        /* Events */
+        .events {
+            display: flex;
+            gap: 40px;
+            padding: 80px 0;
+        }
+
+        .events-box {
+            flex: 1;
+            background: orange;
+            padding: 40px;
+            color: white;
+        }
+
+        .events-img {
+            flex: 1;
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+            height: 300px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .card {
+            text-align: center;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .card img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #2196f3;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            gap: 40px;
+        }
+
+        .map {
+            flex: 1;
+            background: #ccc;
+            height: 250px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <h2 class="logo">Swimming®</h2>
+            <nav>
+                <ul class="nav-links">
+                    <li class="active">Home</li>
+                    <li>About us</li>
+                    <li>Gallery</li>
+                    <li>Blog</li>
+                    <li>Contacts</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Feature Boxes -->
+    <section class="features container">
+        <div class="feature orange">
+            <h3>Register for swim lessons</h3>
+            <p>Our experienced instructors offer swimming lessons.</p>
+        </div>
+
+        <div class="feature purple">
+            <h3>Franchise Opportunities</h3>
+            <p>Swimming School Franchise in the thriving education.</p>
+        </div>
+
+        <div class="feature pink">
+            <h3>What Level Is My Child?</h3>
+            <p>Use our Level Finder to determine your swimmer’s level.</p>
+        </div>
+
+        <div class="feature violet">
+            <h3>Locate a Swim School</h3>
+            <p>Use our Level Finder to determine location.</p>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="about container">
+        <div class="about-text">
+            <h2>Welcome to our school!</h2>
+            <p>Swimming School is proud to provide state-of-the-art aquatic facilities.</p>
+            <button>Read More</button>
+        </div>
+        <div class="about-img"></div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section class="about container reverse">
+        <div class="about-img img2"></div>
+        <div class="about-text">
+            <h2>Swim lessons for Children and teens</h2>
+            <p>We offer private and group lessons for children and teens.</p>
+            <button>Read More</button>
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="highlight">
+        <div class="highlight-content container">
+            <div class="highlight-box">
+                <h2>Why Our Swimming School is Rated #1</h2>
+                <p>We offer private and group lessons for children and teens.</p>
+                <button>Know More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events container">
+        <div class="events-box">
+            <h2>Our Events</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Xing elit sed do eiusmod.</li>
+                <li>Eolore magna aliqua.</li>
+                <li>Maecenas accumsan lacus.</li>
+            </ul>
+        </div>
+        <div class="events-img"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials container">
+        <div class="card">
+            <img src="https://via.placeholder.com/100" />
+            <p>Great experience learning swimming here.</p>
+            <h4>Anne, 25 y.o.</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/100" />
+            <p>I improved my swimming skills.</p>
+            <h4>Sam, 23 y.o.</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/100" />
+            <p>Best place to learn swimming.</p>
+            <h4>Peter, 28 y.o.</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/100" />
+            <p>I was afraid of water before but not now.</p>
+            <h4>Jane, 20 y.o.</h4>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2>Contacts</h2>
+                <p>Address: 4578 Marmora Road, Glasgow</p>
+                <h3>1-800-2345-6789</h3>
+                <p>Email: yourmail.com</p>
+            </div>
+            <div class="map"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Swimming © 2020. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
