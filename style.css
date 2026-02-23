@@ -295,7 +295,7 @@ header {
     left: 0;
 }
 
-.event-content ul :not(:last-child) {
+.event-content ul> :not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -338,7 +338,7 @@ header {
     color: #fff;
 }
 
-.contact-card :not(:last-child) {
+.contact-card .contact-content> :not(:last-child) {
     margin-bottom: 30px;
 }
 
