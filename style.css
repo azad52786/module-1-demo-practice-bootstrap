@@ -30,12 +30,6 @@ header {
     position: relative;
 }
 
-.navbar {
-    display: none;
-}
-
-
-
 .navbar__wrapper {
     display: flex;
     justify-content: space-between;
@@ -70,17 +64,20 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-    .navbar {
+    .nav-bar {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
     }
 
     .navbar__menu {
         display: block;
-        padding-bottom: 10px;
         background-color: #fff;
-        width: 100vw;
+        box-shadow: 0 8px 6px rgba(0, 0, 0, 0.3);
+        padding-block: 16px;
+        padding-inline: 0;
     }
 
     .navbar__menu li {
@@ -94,6 +91,7 @@ header {
         font-size: 1.5rem;
         font-weight: 500;
         border-radius: 10px;
+        text-align: center;
     }
 }
 
@@ -125,25 +123,8 @@ header {
     background: url(./images/banner-img.jpg) center / cover no-repeat;
 }
 
-.section-cards {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
-    margin-block: 48px;
-    justify-content: center;
-}
-
 .feature-action-cards {
     margin-top: -150px;
-}
-
-.four-col-card,
-.two-col-card {
-    flex: 0 0 100%;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    min-width: 0;
 }
 
 .feature-action-card {
@@ -151,10 +132,12 @@ header {
     padding-inline: 20px;
     padding-block: 30px;
     min-width: 0;
+    height: 100%;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .quick-action-content {
-    flex: 0 0 90%;
     min-width: 0;
     color: #fff;
 }
@@ -173,7 +156,6 @@ header {
 
 .feature-action-card a {
     align-self: flex-end;
-    flex: 0 0 10%;
 }
 
 .feature-action-card a::before {
@@ -250,10 +232,6 @@ header {
     width: fit-content;
 }
 
-.about-section-content a {
-    align-self: flex-start;
-}
-
 .gradient-btn::before {
     content: '';
     position: absolute;
@@ -286,11 +264,6 @@ header {
 .why-us-section {
     min-height: 400px;
     background: url(./images/swimming-bg1.jpg) center / cover no-repeat;
-    margin-block: 24px;
-}
-
-.why-us-section .section-cards {
-    justify-content: flex-start;
 }
 
 .highlighted-card-content {
@@ -327,11 +300,11 @@ header {
 }
 
 .testimonial-card {
-    position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
-.testimonial-card img {
+
+.testimonial-section img {
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -373,13 +346,6 @@ header {
     color: #fff;
 }
 
-#contact-section iframe {
-    border: none;
-    width: 100%;
-    height: auto;
-    min-height: 450px;
-}
-
 .contact-content h2 {
     font-size: 4rem;
     font-weight: 500;
@@ -412,40 +378,22 @@ header {
 }
 
 .social-media-handels {
-    display: flex;
-    gap: 40px;
     filter: invert(1);
 }
 
-footer {
-    text-align: center;
+footer p {
     color: #3d3c3c;
-    margin: 24px;
     font-weight: 200;
     font-size: 1.6rem;
     line-height: 1.4;
     padding: 30px 0;
 }
 
-.container {
-    width: 100%;
-    padding-inline: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
+@media (min-width: 576px) {}
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-
     .about-section-content {
         padding-inline: 50px;
         padding-block: 80px;
@@ -465,41 +413,15 @@ footer {
 }
 
 @media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-
-    .four-col-card,
-    .two-col-card {
-        flex: 0 0 calc((100% - 24px) / 2);
-    }
-
-    .navbar {
+    .nav-bar {
         display: block !important;
     }
 
-    .navbar-toggle-button,
-    .mobile-navbar__menu {
+    .navbar-toggle-button {
         display: none;
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+@media (min-width: 1200px) {}
 
-    .four-col-card {
-        flex: 0 0 calc((100% - 48px) / 3);
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-
-    .four-col-card {
-        flex: 0 0 calc((100% - 72px) / 4);
-    }
-}
+@media (min-width: 1400px) {}
