@@ -186,6 +186,7 @@ header {
     padding-inline: 10px;
     padding-block: 30px;
     background-color: #f7f7f7;
+    height: 100%;
 }
 
 .about-section-content>:not(:last-child),
@@ -336,6 +337,7 @@ header {
     background: linear-gradient(to bottom right, #0298e1, #007cc6);
     padding: 20px;
     color: #fff;
+    height: 100%;
 }
 
 .contact-card .contact-content> :not(:last-child) {
